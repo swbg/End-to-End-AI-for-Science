@@ -8,23 +8,27 @@ The training pipeline is based on the [StormCast example](https://github.com/NVI
 
 ## Instructions
 
-- Build your environment using `workshop/Dockerfile`:
+- Build your environment using the `Dockerfile`:
 
 ```
-docker build -t earth2workshop:25.06 -f workshop/Dockerfile workshop
+docker build -t earth2workshop:25.06 .
 ```
 
 - Start your container on a system with an NVIDIA GPU:
 
 ```
 docker run --gpus all --ipc host --pid host --shm-size 16g \
-    -v /path/to/workshop:/dli/workshop \
+    -v /path/to/GTC2026_HandsOnWithEarth-2:/dli/workshop \
     -v /path/to/data:/data \
+    -v /path/to/output:/output \
+    -p 8888:8888 \
+    -p 6006:6006 \
     -t earth2workshop:25.06
 ```
 
 - Navigate to `localhost:8888` in a web browser.
-- Follow the notebooks in `workshop/notebooks`.
+- Follow the notebooks in `notebooks/`.
+- For a more detailed description of the training example, see `OVERVIEW.md`.
 
 ## Resources
 
