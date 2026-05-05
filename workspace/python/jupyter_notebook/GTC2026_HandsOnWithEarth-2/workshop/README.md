@@ -18,7 +18,7 @@ atmospheric structure via deep learning-based CAM emulation. StormCast enables h
 regional weather forecasting and climate risk analysis.
 
 <p align="center">
-<img src="../images/stormcast_rollout.gif"/>
+<img src="images/stormcast_rollout.gif"/>
 </p>
 
 The design of StormCast relies on two neural networks:
