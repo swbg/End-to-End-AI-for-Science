@@ -37,8 +37,8 @@ docker build -t earth2dli1:0.1.0 .
 
 ```bash
 docker run --gpus all --ipc host --pid host --shm-size 16g \
-    -v /home/sweissenberg/repos/earth2dli1:/workspace/dli \
-    -v /home/sweissenberg/data/earth2dli1:/workspace/data \
+    -v /path/to/GTC2025_WeatherForecastingWithEarth-2:/workspace/dli \
+    -v /path/to/data:/workspace/data \
     --entrypoint python3 \
     earth2dli1:0.1.0 \
     /workspace/dli/data/fetch_cache.py
@@ -48,8 +48,8 @@ docker run --gpus all --ipc host --pid host --shm-size 16g \
 
 ```bash
 docker run --gpus all --ipc host --pid host --shm-size 16g \
-    -v /home/sweissenberg/repos/earth2dli1:/workspace/dli \
-    -v /home/sweissenberg/data/earth2dli1:/workspace/data \
+    -v /path/to/GTC2025_WeatherForecastingWithEarth-2:/workspace/dli \
+    -v /path/to/data:/workspace/data \
     -p 8888:8888 \
     earth2dli1:0.1.0
 ```
